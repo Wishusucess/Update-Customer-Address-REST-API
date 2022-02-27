@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/*
+* Developer: Hemant Singh Magento 2x Developer
+* Website:   http://www.wishusucess.com/
+*/    
+-->
+<routes
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/addresses" method="POST">
+        <service class="Magento\Customer\Api\AddressRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Magento_Customer::manage"/>
+        </resources>
+    </route>
+</routes>
